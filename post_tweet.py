@@ -28,7 +28,7 @@ def tweety(text):
 
     browser.implicitly_wait(5)
     browser.get('https://twitter.com/intent/tweet')
-    tweet = browser.find_element_by_css_selector("br[data-text='true']")
+    tweet = browser.find_element_by_css_selector("textarea[data-testid='tweetTextarea_0']")
     tweet.send_keys(str(text))
 
     button = browser.find_element_by_css_selector("div[data-testid='tweetButton']")
