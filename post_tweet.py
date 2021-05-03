@@ -27,10 +27,11 @@ def tweety(text):
     password.send_keys(Keys.ENTER)
 
     browser.implicitly_wait(5)
+    browser.get('https://twitter.com/intent/tweet')
     tweet = browser.find_element_by_css_selector("br[data-text='true']")
     tweet.send_keys(str(text))
 
-    button = browser.find_element_by_css_selector("div[data-testid='tweetButtonInline']")
+    button = browser.find_element_by_css_selector("div[data-testid='tweetButton']")
     button.click()
 
     browser.close()
