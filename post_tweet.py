@@ -14,7 +14,7 @@ userPassword = os.environ['PASSWORD']
 
 
 def tweety(text):
-    browser = webdriver.Chrome(CHROMEDRIVERPATH)
+    browser = webdriver.Chrome()
     browser.get(url)
 
     browser.implicitly_wait(5)
